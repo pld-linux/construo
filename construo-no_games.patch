@@ -1,0 +1,72 @@
+diff -ur construo-0.2.2.orig/construo.hxx construo-0.2.2/construo.hxx
+--- construo-0.2.2.orig/construo.hxx	2004-02-15 17:43:36.000000000 +0100
++++ construo-0.2.2/construo.hxx	2004-02-15 17:44:32.000000000 +0100
+@@ -22,7 +22,7 @@
+ 
+ #include <config.h>
+ 
+-#define CONSTRUO_DATADIR DATADIR"/games/"PACKAGE
++#define CONSTRUO_DATADIR DATADIR"/"PACKAGE
+ 
+ class SystemContext;
+ class InputContext;
+diff -ur construo-0.2.2.orig/examples/Makefile.am construo-0.2.2/examples/Makefile.am
+--- construo-0.2.2.orig/examples/Makefile.am	2004-02-15 17:43:36.000000000 +0100
++++ construo-0.2.2/examples/Makefile.am	2004-02-15 17:45:08.000000000 +0100
+@@ -15,8 +15,8 @@
+ ##  along with this program; if not, write to the Free Software
+ ##  Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.
+ 
+-pkgdatadir = $(datadir)/games/@PACKAGE@/examples
++pkgdatadir = $(datadir)/@PACKAGE@/examples
+ 
+ nobase_dist_pkgdata_DATA = *.construo choh/*.construo choh2/*.construo
+ 
+-# EOF #
+\ Brak znaku nowej linii na koñcu pliku
++# EOF #
+diff -ur construo-0.2.2.orig/Makefile.am construo-0.2.2/Makefile.am
+--- construo-0.2.2.orig/Makefile.am	2004-02-15 17:43:36.000000000 +0100
++++ construo-0.2.2/Makefile.am	2004-02-15 17:45:25.000000000 +0100
+@@ -17,7 +17,7 @@
+ 
+ SUBDIRS = examples
+ 
+-bindir=$(prefix)/games
++# bindir=@BINDIR@
+ 
+ bin_PROGRAMS = @ConstruoTargets@
+ 
+@@ -159,7 +159,7 @@
+ construo_freeglut_LDADD   = libconstruo.a @freeglut_LIBS@
+ construo_freeglut_CXXFLAGS = -DUSE_GLUT_DISPLAY -DHAVE_FREEGLUT
+ 
+-# pkgdatadir = $(datadir)/games/@PACKAGE@
++# pkgdatadir = $(datadir)/@PACKAGE@
+ EXTRA_DIST = TODO  INSTALL.configure xml2sexpr.sh compatlib/sstream
+ 
+-# EOF #
+\ Brak znaku nowej linii na koñcu pliku
++# EOF #
+Tylko w construo-0.2.2: Makefile.am~
+--- construo-0.2.2.orig/configure.ac	2003-07-28 23:13:59.000000000 +0200
++++ construo-0.2.2/configure.ac	2004-02-15 18:38:47.000000000 +0100
+@@ -69,9 +69,9 @@
+                 CXXFLAGS="$CXXFLAGS -Icompatlib/"])
+ 
+ dnl Checking for the install prefix and then use it to define PINGUS_DATADIR
+-dnl PINGUS_EXPAND_DIR(pingus_datadir, "$datadir/games/$PACKAGE")
++dnl PINGUS_EXPAND_DIR(pingus_datadir, "$datadir/$PACKAGE")
+ dnl AC_DEFINE_UNQUOTED(PINGUS_DATADIR, "$pingus_datadir", [Location of Pingus data files])
+-dnl AC_DEFINE(CONSTRUO_DATADIR, $datadir/games/$PACKAGE, [Location of Construo datafiles])
++dnl AC_DEFINE(CONSTRUO_DATADIR, $datadir/$PACKAGE, [Location of Construo datafiles])
+ AC_DEFINE_DIR(DATADIR, datadir, [Location of datafiles])
+ 
+ AC_CHECK_LIB(z, gzopen)
+@@ -158,4 +158,4 @@
+ echo "  Ingo Ruhnke <grumbel@gmx.de>"
+ echo ""
+ 
+-# EOF #
+\ Brak znaku nowej linii na koñcu pliku
++# EOF #
