@@ -12,6 +12,7 @@ URL:		http://www.nongnu.org/construo/
 BuildRequires:	autoconf
 BuildRequires:	automake
 BuildRequires:	glut-devel
+BuildRequires:	libstdc++-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
