@@ -1,4 +1,4 @@
-Summary:	Simple 2D construction programm
+Summary:	Simple 2D construction programme
 Summary(pl):	Prosty program do tworzenia dwuwymiarowych konstrukcji
 Name:		construo
 Version:	0.2.1
@@ -14,10 +14,13 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		_bindir		%{_prefix}/games
 
 %description
-Construo is a programm for constructing wire-frame objects and let
+Construo is a programme for constructing wire-frame objects and let
 them react on physical forces, its neither a real simulation nor a
 real game, its just a little toy app which can be a nice way to waste
 time.
+
+%description -l pl
+# TODO
 
 %prep
 %setup -q
