@@ -1,12 +1,12 @@
 Summary:	Simple 2D construction programme
 Summary(pl):	Prosty program do tworzenia dwuwymiarowych konstrukcji
 Name:		construo
-Version:	0.2.1
+Version:	0.2.2
 Release:	1
 License:	GPL
 Group:		X11/Amusements
 Source0:	http://freesoftware.fsf.org/download/construo/construo.pkg/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	f8c27c5f2d806fcdc68a253e254490df
+# Source0-md5:	c18144898f98929b67245c5f703f9f39
 URL:		http://www.nongnu.org/construo/
 BuildRequires:	glut-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
