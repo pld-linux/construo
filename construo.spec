@@ -20,7 +20,10 @@ real game, its just a little toy app which can be a nice way to waste
 time.
 
 %description -l pl
-# TODO
+Construo to program do konstruowania obiektów w postaci modeli
+drutowych i umo¿liwiania im reagowania na si³y fizyczne - nie jest to
+prawdziwa symulacja ani prawdziwa gra, jedynie ma³a aplikacja do
+zabawy, mog±ca byæ mi³ym sposobem marnowania czasu.
 
 %prep
 %setup -q
@@ -31,7 +34,8 @@ time.
 %{__make}
 
 %install
-%{__make} install DESTDIR=$RPM_BUILD_ROOT
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
