@@ -7,11 +7,10 @@ License:	GPL
 Group:		X11/Amusements
 Source0:	http://freesoftware.fsf.org/download/construo/construo.pkg/%{version}/%{name}-%{version}.tar.gz
 # Source0-md5:	c18144898f98929b67245c5f703f9f39
+Patch0:		%{name}-no_games.patch
 URL:		http://www.nongnu.org/construo/
 BuildRequires:	glut-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define		_bindir		%{_prefix}/games
 
 %description
 Construo is a programme for constructing wire-frame objects and let
@@ -27,8 +26,12 @@ zabawy, mog±ca byæ mi³ym sposobem marnowania czasu.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %build
+%{__aclocal}
+%{__autoconf}
+%{__automake}
 %configure \
 	--disable-debug
 %{__make}
@@ -44,4 +47,4 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS NEWS README TODO
 %attr(755,root,root) %{_bindir}/*
-%{_datadir}/games/construo
+%{_datadir}/%{name}
