@@ -9,6 +9,8 @@ Source0:	http://freesoftware.fsf.org/download/construo/construo.pkg/%{version}/%
 # Source0-md5:	c18144898f98929b67245c5f703f9f39
 Patch0:		%{name}-no_games.patch
 URL:		http://www.nongnu.org/construo/
+BuildRequires:	autoconf
+BuildRequires:	automake
 BuildRequires:	glut-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
