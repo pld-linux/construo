@@ -1,5 +1,5 @@
 Summary:	Simple 2D construction programme
-Summary(pl):	Prosty program do tworzenia dwuwymiarowych konstrukcji
+Summary(pl.UTF-8):   Prosty program do tworzenia dwuwymiarowych konstrukcji
 Name:		construo
 Version:	0.2.2
 Release:	3
@@ -21,11 +21,11 @@ them react on physical forces, its neither a real simulation nor a
 real game, its just a little toy app which can be a nice way to waste
 time.
 
-%description -l pl
-Construo to program do konstruowania obiektÛw w postaci modeli
-drutowych i umoøliwiania im reagowania na si≥y fizyczne - nie jest to
-prawdziwa symulacja ani prawdziwa gra, jedynie ma≥a aplikacja do
-zabawy, mog±ca byÊ mi≥ym sposobem marnowania czasu.
+%description -l pl.UTF-8
+Construo to program do konstruowania obiekt√≥w w postaci modeli
+drutowych i umo≈ºliwiania im reagowania na si≈Çy fizyczne - nie jest to
+prawdziwa symulacja ani prawdziwa gra, jedynie ma≈Ça aplikacja do
+zabawy, mogƒÖca byƒá mi≈Çym sposobem marnowania czasu.
 
 %prep
 %setup -q
