@@ -1,5 +1,5 @@
 Summary:	Simple 2D construction programme
-Summary(pl.UTF-8):   Prosty program do tworzenia dwuwymiarowych konstrukcji
+Summary(pl.UTF-8):	Prosty program do tworzenia dwuwymiarowych konstrukcji
 Name:		construo
 Version:	0.2.2
 Release:	3
