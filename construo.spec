@@ -29,7 +29,7 @@ zabawy, mogąca być miłym sposobem marnowania czasu.
 
 %prep
 %setup -q
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 %{__aclocal}
